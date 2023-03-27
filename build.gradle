@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.hlammaster'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    implementation 'org.jetbrains:annotations:23.0.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    testImplementation 'com.codeborne:selenide:6.12.2'
+}
+
+test {
+    useJUnitPlatform()
+}
