@@ -44,7 +44,7 @@ public class blaclass {
 
     @Test
     void xlsTest() throws Exception {
-        InputStream stream = getClass().getClassLoader().getResourceAsStream("123.xls");
+        InputStream stream = getClass().getClassLoader().getResourceAsStream("666.xls");
         XLS xls = new XLS(stream);
         System.out.println();
     }

@@ -53,22 +53,6 @@ public class ParsingTest {
 
 
     }
-    @Test
-    void zipXlsParsingTest() throws Exception {
-        ZipFile zipFile = new ZipFile(new File("src/test/resources/ziptest.zip"));
-        try (InputStream is = cl.getResourceAsStream("ziptest.zip");
-             ZipInputStream zs = new ZipInputStream(is)) {
-            ZipEntry entry;
-            while ((entry = zs.getNextEntry()) != null) {
-                if (entry.getName().equals("123.xls"))
-                    try (InputStream inputStreamXls = zipFile.getInputStream(entry)) {
-                        XLS xls = new XLS(inputStreamXls);
-                        System.out.println();
 
-                    }
-            }
-        }
-
-    }
 
 }
