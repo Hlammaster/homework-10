@@ -1,29 +1,20 @@
 import com.codeborne.pdftest.PDF;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.xlstest.XLS;
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 import com.opencsv.CSVReader;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
 import java.util.List;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
-import java.util.zip.ZipInputStream;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.xlstest.XLS.containsText;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class blaclass {
+public class SimplePars {
 
 
-    private ClassLoader cl = blaclass.class.getClassLoader();
+    private ClassLoader cl = SimplePars.class.getClassLoader();
     @Test
     void pdfTest() throws Exception {
         InputStream stream = cl.getResourceAsStream("junit-user-guide-5.9.2.pdf");
@@ -44,7 +35,7 @@ public class blaclass {
 
     @Test
     void xlsTest() throws Exception {
-        InputStream stream = getClass().getClassLoader().getResourceAsStream("666.xls");
+        InputStream stream = getClass().getClassLoader().getResourceAsStream("123.xlsm");
         XLS xls = new XLS(stream);
         System.out.println();
     }
