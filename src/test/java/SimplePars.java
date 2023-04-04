@@ -7,11 +7,16 @@ import org.junit.jupiter.api.Test;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 import static com.codeborne.selenide.Selenide.$;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class SimplePars {
+
+
+
 
 
     private ClassLoader cl = SimplePars.class.getClassLoader();
@@ -39,7 +44,6 @@ public class SimplePars {
         XLS xls = new XLS(stream);
         System.out.println();
     }
-
 
 }
 
