@@ -40,9 +40,9 @@ public class SimplePars {
 
     @Test
     void xlsTest() throws Exception {
-        InputStream stream = getClass().getClassLoader().getResourceAsStream("123.xlsm");
+        InputStream stream = getClass().getClassLoader().getResourceAsStream("666.xls");
         XLS xls = new XLS(stream);
-        System.out.println();
+        Assertions.assertTrue(xls.excel.getSheetAt(1).getRow(0).getCell(2).getStringCellValue().startsWith("Возраст"));
     }
 
 }
